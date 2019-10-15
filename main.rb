@@ -1,19 +1,19 @@
 class Pessoa
-  attr_reader :nome, :email
+  attr_reader :name, :email
   
-  def initialize(nome, email)
-    @nome = nome
+  def initialize(name, email)
+    @name = name
     @email = email
   end
 end
 
 class Rdoer < Pessoa
-  attr_accessor :time, :apelido
+  attr_accessor :squad, :nickname
   
-  def initialize(nome, email, time, apelido)
-    super(nome, email)
-    @time = time
-    @apelido = apelido
+  def initialize(name, email, squad, nickname)
+    super(name, email)
+    @squad = squad
+    @nickname = nickname
   end
 
   def summit(will_work, reason)
