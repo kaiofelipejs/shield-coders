@@ -19,7 +19,5 @@ class Rdoer < Pessoa
   def summit(will_work, reason)
     will_work == true ? "Go to summit" : "#{name} não vai por esse motivo: #{reason}"
   end
-
 end
-
 # novoRdoer = Rdoer.new("Kaio", "kaio.silva@", "TM", "Kaiera")
