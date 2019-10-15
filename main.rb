@@ -17,11 +17,7 @@ class Rdoer < Pessoa
   end
 
   def summit(will_work, reason)
-    if will_work == false
-      "#{name} não vai por esse motivo: #{reason}"
-    else
-      puts "Go to summit!"
-    end 
+    will_work == true ? "Go to summit" : "#{name} não vai por esse motivo: #{reason}"
   end
 
 end
