@@ -16,6 +16,14 @@ class Rdoer < Pessoa
     @apelido = apelido
   end
 
+  def summit(will_work, reason)
+    if will_work == false
+      "#{name} não vai por esse motivo: #{reason}"
+    else
+      puts "Go to summit!"
+    end 
+  end
+
 end
 
-novoRdoer = Rdoer.new("Kaio", "kaio.silva@", "TM", "Kaiera")
+# novoRdoer = Rdoer.new("Kaio", "kaio.silva@", "TM", "Kaiera")
