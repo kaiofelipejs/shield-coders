@@ -16,8 +16,21 @@ class Rdoer < Pessoa
     @nickname = nickname
   end
 
-  def summit(will_work, reason)
-    will_work == true ? "Go to summit" : "#{name} não vai por esse motivo: #{reason}"
+  def summit(will_work, reason="")
+    if will_work == true
+      rdoerJob = job_select()
+      puts "#{name} vai no Summit e vai trabalhar com #{rdoerJob}"
+    else 
+      puts "#{name} não vai no Summit por esse motivo: #{reason}"
+    end
+  end
+
+  private 
+  
+  def job_select(jobs="")
+    jobs = ['Chopeira', 'Credenciamento', 'Gerenciamento de Filas', 'Hosts dos Palestrantes']
+    randomNumber = rand(0...4)
+    rdoerJob = jobs[randomNumber]
+    return rdoerJob
   end
 end
-# novoRdoer = Rdoer.new("Kaio", "kaio.silva@", "TM", "Kaiera")
