@@ -25,7 +25,9 @@ class Rdoer < Pessoa
     end
   end
 
-  private def job_select(jobs="")
+  private 
+  
+  def job_select(jobs="")
     jobs = ['Chopeira', 'Credenciamento', 'Gerenciamento de Filas', 'Hosts dos Palestrantes']
     randomNumber = rand(0...4)
     rdoerJob = jobs[randomNumber]
